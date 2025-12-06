@@ -559,7 +559,7 @@ def cmd_exec(hosts, command_str, verbose=False, no_output=False, output_file=Non
         if save_output(formatted, output_file, output_format):
             print(f"\n{Colors.OKGREEN}[+] Results saved to {output_file}{Colors.ENDC}")
 
-def cmd_shell(hosts, verbose=False):
+def cmd_shell(hosts, verbose=False, output_file=None, output_format='txt'):
     """Interactive shell mode (supports multiple hosts)"""
     if not hosts:
         print(f"{Colors.FAIL}[!] Error: At least one host required{Colors.ENDC}")
